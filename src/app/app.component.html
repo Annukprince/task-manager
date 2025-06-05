@@ -1,4 +1,12 @@
-<h1>🚀 Angular Task Manager</h1>
+<h1>Task Manager</h1>
 <app-welcome></app-welcome>
 <hr>
-<app-profile-card></app-profile-card>
+<app-profile-card
+  [userName]="name"
+  [userRole]="role"
+  [userBio]="bio"
+  [profileImage]="image"
+  (roleChanged)="updateRole($event)"
+  (resetRequested)="resetToOriginalRole()">
+</app-profile-card>
+

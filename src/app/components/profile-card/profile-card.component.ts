@@ -1,21 +1,44 @@
-import { Component } from '@angular/core';
-
+import { Component, Input,Output, EventEmitter } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { ButtonComponent } from '../shared/button/button.component';
 @Component({
   selector: 'app-profile-card',
   standalone: true,
-  imports: [],
+  imports: [FormsModule,ButtonComponent],
   templateUrl: './profile-card.component.html',
   styleUrl: './profile-card.component.css'
 })
 export class ProfileCardComponent {
-  userName: string = 'Annu';
-  userRole: string = 'Frontend Developer';
-  userBio: string = 'I love building clean and user-friendly interfaces!';
-  // profileImage: string = 'https://via.placeholder.com/150';
-  // profileImage: string = 'https://randomuser.me/api/portraits/lego/1.jpg';
-  // profileImage: string = 'assets/me.jpg';
-  profileImage = '/me.jpg';
+  @Input() userName: string = 'Annu';
+  @Input() userRole: string = 'Frontend Developer';
+  @Input() userBio: string = 'I love building clean and user-friendly interfaces!';
+  
+  @Input() profileImage = '/me.jpg';
 
+
+  newRole: string = '';
+
+  resetName() {
+    this.userName = 'Annu';
+  }
+  @Output() roleChanged = new EventEmitter<string>();
+
+  // changeRole() {
+  //   this.roleChanged.emit('Senior Frontend Developer');
+  // }
+
+  changeRole() {
+    if (this.newRole.trim()) {
+      this.roleChanged.emit(this.newRole);
+      this.newRole = ''; // Clear the input after emitting
+    }
+  }
+  
+  @Output() resetRequested = new EventEmitter<void>();
+
+resetRole() {
+  this.resetRequested.emit();
+}
 
 
 

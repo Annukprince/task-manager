@@ -1,7 +1,23 @@
+<div class =" wrapper">
+
 <div class="card">
-    <img [src]="profileImage" alt="Profile Image">
+    <img [src]="profileImage" alt=" {{userName}} Profile Image">
     <h3>{{ userName }}</h3>
     <p class="role">{{ userRole }}</p>
     <p class="bio">{{ userBio }}</p>
+    <input [(ngModel)]="userName" placeholder="Edit your name" />
+    <!-- <button (click)="resetName()">Reset Name</button> -->
+    <app-button [label]="'Reset Name'" (clicked)="resetName()"></app-button>
+
+    
+<!-- <button (click)="resetRole()">Reset</button> -->
+
+
+<input [(ngModel)]="newRole" placeholder="Enter new role" />
+<!-- <button (click)="changeRole()">Promote</button> -->
+<app-button [label]="'Promote'" (clicked)="changeRole()"></app-button>
+<app-button [label]="'Reset'" (clicked)="resetRole()"></app-button>
+
   </div>
+</div>
   

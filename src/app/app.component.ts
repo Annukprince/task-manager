@@ -12,4 +12,22 @@ import { ProfileCardComponent } from './components/profile-card/profile-card.com
 })
 export class AppComponent {
   title = 'task-manager';
+  name = 'Annu';
+  role = 'Frontend Developer';
+  bio = 'I love building clean and user-friendly interfaces!';
+  image = '/me.jpg';
+
+  
+  originalRole = 'Frontend Developer';
+roles = this.originalRole;
+
+updateRole(newRole: string) {
+  this.role = newRole;
+}
+
+resetToOriginalRole() {
+  this.role = this.originalRole;
+}
+
+
 }

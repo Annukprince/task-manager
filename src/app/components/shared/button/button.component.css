@@ -1,0 +1,10 @@
+button {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
