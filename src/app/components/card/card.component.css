@@ -1,0 +1,22 @@
+.card {
+    background: linear-gradient(to bottom right, #f8f9fa, #e9ecef);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    margin: 20px auto;
+    max-width: 500px;
+  }
+  
+  .card-body {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  
+  .card-footer {
+    margin-top: 15px;
+    border-top: 1px solid #ccc;
+    padding-top: 8px;
+    color: #666;
+    font-size: 14px;
+  }
+  

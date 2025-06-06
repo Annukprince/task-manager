@@ -1,0 +1,11 @@
+<div class="card">
+    <h2>{{ title }}</h2>
+    <p>{{ shortDescription }}</p>
+  
+    <button (click)="toggleDetails()">
+      {{ showDetails ? 'Hide Details' : 'Show Details' }}
+    </button>
+  
+    <p *ngIf="showDetails">{{ details }}</p>
+  </div>
+  

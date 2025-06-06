@@ -1,0 +1,15 @@
+.card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    max-width: 350px;
+    margin: 1rem auto;
+    border-radius: 8px;
+    box-shadow: 1px 1px 8px #aaa;
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
